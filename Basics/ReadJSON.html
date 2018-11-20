@@ -16,17 +16,8 @@
             var data = '{ "items": [{"fname": "Gandhi", "lname": "K"},{ "fname": "Obama", "lname": "B"}]}';
 
             var mydata = JSON.parse(data);
-            
 
-            $.each(mydata.items, displayData(key,val))
-
-            function displayData(key,val)
-            {
-                alert(val.fname);
-                alert(val.lname);                
-            }
-
-            $.each(mydata.items, 
+             $.each(mydata.items, 
                 function(key, val) 
                 {
                     alert(val.fname);
