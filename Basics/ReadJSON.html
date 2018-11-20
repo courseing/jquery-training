@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
+<script>
+
+    $(document).ready(function (){
+       
+            var data = '{ "items": [{"fname": "Gandhi", "lname": "K"},{ "fname": "Obama", "lname": "B"}]}';
+
+            var mydata = JSON.parse(data);
+            
+
+            $.each(mydata.items, displayData(key,val))
+
+            function displayData(key,val)
+            {
+                alert(val.fname);
+                alert(val.lname);                
+            }
+
+            $.each(mydata.items, 
+                function(key, val) 
+                {
+                    alert(val.fname);
+                    alert(val.lname);
+                }
+            )
+        });
+
+
+
+    // $("#test").hide();
+
+// $(document).ready(function(){
+//     $("p").hide();
+    
+//     $(".test").hide();
+
+//     $("button").click(function(){
+//         $("#test").hide();
+//     });
+// });
+</script>
+</head>
+<body>
+
+<h2>This is a heading</h2>
+
+<p>This is a paragraph.</p>
+<p id="test">This is another paragraph.</p>
+
+<button>Click me</button>
+
+<script>
+    //$("#test").hide();
+</script>
+</body>
+</html>
