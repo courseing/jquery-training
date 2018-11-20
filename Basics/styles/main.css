@@ -1,0 +1,17 @@
+
+h1 
+{
+    color:red;
+}
+
+#h1tags {
+  color: peru;  
+}
+
+.h2tags{
+    color: green;
+}
+
+.bigFont{
+    font-size: 100px;
+}
