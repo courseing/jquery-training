@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Html Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- <script src="~/js/jquery-3.3.1.min.js" ></script> -->
+        <!-- <link rel="stylesheet" href="~/css/my.css" /> -->
+        <script>
+           
+
+           //Anonymous function
+
+            $(document).ready(
+            function ()
+            {
+                sumOfTwoNums(); // Call function
+
+                $("#sum").click(sumOfTwoNums); // Binding or wiring an event
+                $("#num1").change(sumOfTwoNums);
+                $("#num2").change(sumOfTwoNums);
+            }
+
+             ) // Document Ready 
+
+            function sumOfTwoNums()
+            {
+                var x = 10; // No Datatypes
+                var y = 20;
+                var z = x + y;
+                //alert("Hi" + z);
+
+                x =  $("#num1").val();
+                y = $("#num2").css().val();
+                z =  parseInt(x) + parseInt(y); // Parsing
+                $("h1").text(z);
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <input type="textbox" id="num1" value="20" /> 
+        <input type="textbox" id="num2" value="40" /> 
+        <input type="button" id="sum" value = "Click" />
+        <h1 style="color:blue" id="spclH1" >H1 Tag</h1>
+        <h1 class="spclCls" >H1 Tag</h1>
+        <h1  class="spclCls">H1 Tag</h1>
+        <h1  >H1 Tag</h1>
+        <h1  >H1 Tag</h1>
+        <h6>H2 Tag</h6>
+        <p> asdfk askjfjasfjsal aslfjsalkfj salkfjs alfjasklf </p>
+        <input type="text" id="txtName"/>
+
+        <img src="~/images/banner1.svg" height="200px" width="200px" />
+    </body>
+</html>
